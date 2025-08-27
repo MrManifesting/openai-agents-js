@@ -1,0 +1,16 @@
+{
+  "private": true,
+  "name": "cannabis-inventory",
+  "dependencies": {
+    "@openai/agents": "workspace:*",
+    "zod": "^3.25.40"
+  },
+  "scripts": {
+    "build-check": "tsc --noEmit",
+    "start": "tsx index.ts",
+    "start:inventory-analysis": "tsx inventory-analysis.ts",
+    "start:pricing-optimization": "tsx pricing-optimization.ts",
+    "start:menu-generator": "tsx menu-generator.ts",
+    "start:sales-forecast": "tsx sales-forecast.ts"
+  }
+}
