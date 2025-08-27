@@ -1,5 +1,18 @@
 # @openai/agents-realtime
 
+## 0.1.0
+
+### Patch Changes
+
+- 79a1999: Make docs and comments more consistent using Codex
+- 8cf5356: Fix: ensure assistant message items from `response.output_item.done` preserve API status and default to `"completed"` when missing, so `history_updated` no longer stays `"in_progress"` after completion.
+- Updated dependencies [2260e21]
+- Updated dependencies [94f606c]
+- Updated dependencies [79a1999]
+- Updated dependencies [8fc01fc]
+- Updated dependencies [6f1677c]
+  - @openai/agents-core@0.1.0
+
 ## 0.0.17
 
 ### Patch Changes

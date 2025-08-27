@@ -1,5 +1,15 @@
 # @openai/agents-core
 
+## 0.1.0
+
+### Patch Changes
+
+- 2260e21: Upgrade openai package to the latest version
+- 94f606c: Fix #371 streaming agents not calling agent_end lifecycle hook
+- 79a1999: Make docs and comments more consistent using Codex
+- 8fc01fc: Add a quick opt-in option to switch to gpt-5
+- 6f1677c: fix(tracing): Fix #361 include groupId in trace export log message
+
 ## 0.0.17
 
 ### Patch Changes
