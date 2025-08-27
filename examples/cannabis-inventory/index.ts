@@ -107,9 +107,9 @@ const analyzeInventoryTool = tool({
   description:
     'Analyze current inventory status across all tiers and categories',
   parameters: z.object({
-    tier: z.string().optional(),
-    category: z.string().optional(),
-    minQuantity: z.number().optional(),
+    tier: z.string().nullable().optional(),
+    category: z.string().nullable().optional(),
+    minQuantity: z.number().nullable().optional(),
   }),
   execute: async (input) => {
     let filteredInventory = mockInventory;
@@ -220,8 +220,8 @@ const generateMenuTool = tool({
   description: 'Generate formatted menus for different customer segments',
   parameters: z.object({
     customerType: z.enum(['retail', 'bulk', 'wholesale']),
-    minPrice: z.number().optional(),
-    tier: z.string().optional(),
+    minPrice: z.number().nullable().optional(),
+    tier: z.string().nullable().optional(),
   }),
   execute: async (input) => {
     let filteredProducts = mockInventory.filter((item) => item.quantity > 0);
@@ -280,7 +280,7 @@ const forecastSalesTool = tool({
   name: 'forecast_sales',
   description: 'Generate sales forecasts based on historical data and trends',
   parameters: z.object({
-    productId: z.string().optional(),
+    productId: z.string().nullable().optional(),
     days: z.number().default(30),
     includeSeasonal: z.boolean().default(true),
   }),
